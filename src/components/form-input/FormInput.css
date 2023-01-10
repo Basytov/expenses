@@ -1,0 +1,8 @@
+.formInput{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    margin-bottom: 10px;
+    width: 400px;
+   
+}
