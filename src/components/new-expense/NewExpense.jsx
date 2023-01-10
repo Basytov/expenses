@@ -3,7 +3,7 @@ import { ExpenseForm } from "../expense-form/ExpenseForm";
 import { useState } from "react";
 
 export const NewExpense = ({ onNewExpenseAdd }) => {
-  const [showForm, setShowForm] = useState(false); 
+  const [showForm, setShowForm] = useState(false);
 
   const showExpenseForm = () => {
     setShowForm((prevState) => {
@@ -12,14 +12,22 @@ export const NewExpense = ({ onNewExpenseAdd }) => {
   };
 
   return (
-    <div style={{backgroundColor: "rgb(108, 85, 151)", border: '2px solid',  borderRadius: '18px', padding: '5px'}}>
+    <div
+      style={{
+        backgroundColor: "rgb(108, 85, 151)",
+        border: "2px solid",
+        borderRadius: "18px",
+        padding: "5px",
+      }}
+    >
       {showForm ? (
         <ExpenseForm
           onShowForm={showExpenseForm}
           onNewExpenseAdd={onNewExpenseAdd}
         />
       ) : (
-        <Button title="Добавить новый расход" onClick={showExpenseForm} />)}
+        <Button title="Добавить новый расход" onClick={showExpenseForm} />
+      )}
     </div>
   );
 };
